@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+.row-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	overflow: hidden;
+	pointer-events: none;
+	max-width: 4096px;
+	max-height: 2160px;
+}
+.first-row {
+	background-color: lime;
+}
+.second-row {
+	flex-grow: 1;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.paral {
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+@media only screen and (max-width : 1840px ){
+	.paral {
+		background-size: auto 100%;
+	}
+}
+.paral p {
+	color: rgba(255,255,255,1.00);
+	font-size: 40px;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+	line-height: 100px;
+}
+.paral h1 {
+	color: rgba(255,255,255,1.00);
+	font-size: 80px;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+	padding-top: 45vh;
+	line-height: 100px;
+}
