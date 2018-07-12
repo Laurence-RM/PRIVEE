@@ -16,24 +16,24 @@ body, html {
 	margin: 0;
 	padding: 0
 }
-.row-container {
-	display: flex;
-	width: 100%;
+.videocontainer {
+	position: relative;
+	right: 0;
+	bottom: 0;
 	height: 100%;
-	flex-direction: column;
-	overflow: hidden;
+	width: 100%;
+}
+#ytvideo {
+	height: 100%;
+	width: 100%;
+	z-index: 5;
 	pointer-events: none;
-	max-width: 4096px;
-	max-height: 2160px;
 }
-.first-row {
-	background-color: lime;
-}
-.second-row {
-	flex-grow: 1;
-	border: none;
-	margin: 0;
-	padding: 0;
+#overlay {
+	color: rgba(54,43,43,0.91);
+	z-index: 2;
+	position: absolute;
+	z-index: 25;
 }
 .paral {
 	height: 100vh;
