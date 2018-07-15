@@ -14,26 +14,49 @@ body, html {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 0
+	padding: 0;
 }
 .videocontainer {
-	position: relative;
-	right: 0;
-	bottom: 0;
 	height: 100%;
 	width: 100%;
-}
-#ytvideo {
-	height: 100vh;
-	width: 100%;
-	z-index: 5;
-	pointer-events: none;
+	position: relative;
 	overflow: hidden;
 }
-#overlay {
-	color: rgba(54,43,43,0.91);
+.videocontainer iframe {
+	height: 113.5%;
+	width: 100%;
 	position: absolute;
-	z-index: 25;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 1;
+	overflow: hidden;
+}
+.videocontainer .overlay {
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+}
+.videocontainer .overlay h1 {
+	color: rgba(255,255,255,1.00);
+	font-size: 80px;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 45vh 0;
+	text-align: center;
+	z-index: 5;
+}
+.videocontainer .overlay .title {
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+	color: aliceblue;
+	font-size: 50px;
+	font-family: "Lucida Console", Monaco, monospace;
+	letter-spacing: 6px;
+	z-index: 6;
+	text-decoration: none;
 }
 .paral {
 	height: 100vh;
@@ -42,18 +65,22 @@ body, html {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	z-index: 2;
 }
-@media only screen and (max-aspect-ratio: 16/9 ){
-	.paral {
-		background-size: auto 100%;
-	}
+
+.paral .overlay {
+	background-color: rgba(29,48,79,0.46);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 4;
 }
 .paral p {
 	color: rgba(255,255,255,1.00);
 	font-size: 40px;
 	font-family: "Lucida Console", Monaco, monospace;
 	text-align: center;
-	line-height: 100px;
+	z-index: 20;
 }
 .paral h1 {
 	color: rgba(255,255,255,1.00);
@@ -61,5 +88,11 @@ body, html {
 	font-family: "Lucida Console", Monaco, monospace;
 	text-align: center;
 	padding-top: 45vh;
-	line-height: 100px;
+	z-index: 20;
+}
+
+@media only screen and (max-aspect-ratio: 16/9 ) {
+	.paral {
+		background-size: auto 100%;
+	}
 }
