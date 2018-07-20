@@ -10,11 +10,12 @@ $(document).ready(function(){
 	//height adjust
 	var videoWidth = video.outerWidth();
 	var newHeightPer = (videoWidth/newWidth)*100;
+	var topAdjust = (newHeightPer-100)/2;
 	
 	//width adjust
 	var newWidthPer = (videoHeight/(videoWidth*aspectRatio))*100;
 
-    $('#videoiframe').css({"height":newHeightPer+"%"});
+    $('#videoiframe').css({"height":newHeightPer+"%","top":"-"+topAdjust+"%"});
 	//, "width":newWidthPer+"%"
 	console.log(newWidthPer);
 });

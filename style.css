@@ -26,11 +26,11 @@ body, html {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
 	pointer-events: none;
 	z-index: 1;
 	overflow: hidden;
+	top: 0;
+	left: 0;
 }
 .videocontainer .overlay {
 	background-color: transparent;
@@ -51,25 +51,50 @@ body, html {
 	position: absolute;
 	top: 5vh;
 	left: 5vw;
-	color: aliceblue;
+	color: white;
 	font-size: 50px;
 	font-family: "Lucida Console", Monaco, monospace;
 	letter-spacing: 6px;
 	z-index: 6;
 	text-decoration: none;
 }
+.pagemenu {
+	z-index: 6;
+	list-style-type: none;
+	display: inline;
+	overflow: hidden;
+}
+.pagemenu li {
+	float: right;
+	margin-top: 6vh;
+}
+.pagemenu li a {
+	display: block;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration: none;
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 25px;
+	letter-spacing: 2px;
+	font-variant-caps: all-petite-caps;
+}
 .whitespace {
-	background-color: aliceblue;
-	height: 250px;
+	background-color: white;
+	height: 200px;
 	width: 100%;
 	overflow: hidden;
 	z-index: 10;
 }
-.whitespace h1 {
-	color: rgba(0,0,0,1.00);
-	font-size: 25px;
-	padding-top: 40px;
-	font-family: "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+.whitespace p {
+	color: rgba(94,94,94,1.00);
+	font-size: 18px;
+	padding-top: 50px;
+	padding-bottom: 40px;
+	padding-left: 30%;
+	padding-right: 30%;
+	font-family: "source-sans-pro", "droid-sans", "sans-serif";
 	text-align: center;
 	z-index: 15;
 }
@@ -82,7 +107,34 @@ body, html {
 	overflow: hidden;
 	z-index: 2;
 }
-
+.paral2 {
+	height: 450px;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 2;
+}
+.paral2 .paragraph {
+	color: rgba(255,255,255,1.00);
+	font-size: 30px;
+	font-family: "source-sans-pro", "droid-sans", "sans-serif";
+	text-align: center;
+	z-index: 20;
+	margin-left: 30vw;
+	margin-right: 5vw;
+	margin-top: 50px;
+}
+.paral2 .title {
+	color: rgba(255,255,255,1.00);
+	font-size: 60px;
+	font-family: "Lucida Console", Monaco, monospace;
+	margin-left: 10vw;
+	margin-top: 200px;
+	margin-right: 70vw;
+	z-index: 20;
+}
 .paral .overlay {
 	background-color: rgba(29,48,79,0.46);
 	height: 100%;
