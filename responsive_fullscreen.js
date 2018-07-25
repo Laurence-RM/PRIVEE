@@ -17,21 +17,24 @@ $(document).ready(function(){
 
     $('#videoiframe').css({"height":newHeightPer+"%","top":"-"+topAdjust+"%"});
 	//, "width":newWidthPer+"%"
-	console.log(newWidthPer);
 });
 
 $(window).on('resize', function() {
 
     // Same code as on load        
-    var aspectRatio = 1.77777777;
-    var video = $('.videocontainer iframe');
+     var aspectRatio = 1.77777777;
+    var video = $('.videocontainer');
     var videoHeight = video.outerHeight();
     var newWidth = videoHeight*aspectRatio;
 	
 	//height adjust
-	var container = $('.videocontainer');
-	var videoWidth = container.outerWidth();
+	var videoWidth = video.outerWidth();
 	var newHeightPer = (videoWidth/newWidth)*100;
+	var topAdjust = (newHeightPer-100)/2;
+	
+	//width adjust
+	var newWidthPer = (videoHeight/(videoWidth*aspectRatio))*100;
 
-    video.css({"height":newHeightPer+"%"});
+    $('#videoiframe').css({"height":newHeightPer+"%","top":"-"+topAdjust+"%"});
+	//, "width":newWidthPer+"%"
 });

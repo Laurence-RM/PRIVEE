@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+@import url("https://use.typekit.net/ugv6yjj.css");
 
 * {
 	margin: 0;
@@ -16,11 +17,36 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
+footer {
+	background-color: rgba(35,46,51,1.00);
+	width: 100%;
+	height: 160px;
+}
+footer p{
+	font-size: 1em;
+	font-family: "Raleway", "Lucida Console", "sans-serif";
+	color: gainsboro;
+	text-align: center;
+	padding-top: 72px;
+}
 .videocontainer {
 	height: 100vh;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+}
+.video2 {
+	height: 800px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(15,52,96,1.00);
+	text-align: center;
+}
+.video2 iframe {
+	padding-top: 75px;
+	height: 650px;
+	width: 1156px;
 }
 #videoiframe {
 	height: 100%;
@@ -41,8 +67,8 @@ body, html {
 }
 .videocontainer .overlay h1 {
 	color: rgba(255,255,255,1.00);
-	font-size: 80px;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 100px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	padding: 45vh 0;
 	text-align: center;
 	z-index: 5;
@@ -53,7 +79,7 @@ body, html {
 	left: 5vw;
 	color: white;
 	font-size: 50px;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	letter-spacing: 6px;
 	z-index: 6;
 	text-decoration: none;
@@ -67,6 +93,7 @@ body, html {
 .pagemenu li {
 	float: right;
 	margin-top: 6vh;
+	
 }
 .pagemenu li a {
 	display: block;
@@ -75,10 +102,13 @@ body, html {
 	padding-right: 15px;
 	text-decoration: none;
 	color: white;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	font-size: 25px;
 	letter-spacing: 2px;
 	font-variant-caps: all-petite-caps;
+}
+.pagemenu li a:hover {
+	color: rgba(56,238,255,1.00);
 }
 .whitespace {
 	background-color: white;
@@ -90,15 +120,46 @@ body, html {
 .whitespace p {
 	color: rgba(94,94,94,1.00);
 	font-size: 18px;
-	padding-top: 50px;
-	padding-bottom: 40px;
+	padding-top: 72px;
 	padding-left: 30%;
 	padding-right: 30%;
-	font-family: "source-sans-pro", "droid-sans", "sans-serif";
+	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
 	text-align: center;
 	z-index: 15;
 }
-.paral {
+.amenspace {
+	background-color:rgba(15,52,96,1.00);
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.amenspace ul {
+	list-style-type: circle;
+	list-style-position: outside;
+	flex: 0 0 15vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 50px;
+}
+.amenspace li {
+	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
+	color: white;
+	font-size: 20px;
+	margin-left: 25px;
+	margin-bottom: 10px;
+}
+.amenspace h1 {
+	font-family: raleway, "source-sans-pro", "droid-sans", "sans-serif";
+	color: lightcyan;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.paral,.paral3 {
 	height: 100vh;
 	background-attachment: fixed;
 	background-size: 100% auto;
@@ -107,12 +168,47 @@ body, html {
 	overflow: hidden;
 	z-index: 2;
 }
+.paral .overlay {
+	background-color: rgba(29,48,79,0.46);
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 4;
+}
+.paral p {
+	color: rgba(255,255,255,1.00);
+	font-size: 40px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	text-align: center;
+	z-index: 20;
+}
+.paral h1 {
+	color: rgba(255,255,255,1.00);
+	font-size: 80px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	text-align: center;
+	padding-top: 45vh;
+	z-index: 20;
+}
+.paral3 {
+	height: 75vh;
+}
 .paral2 {
-	height: 450px;
-	width: 100vw;
-/*	border-style: solid;
-	border-color: darkblue;
-	border-width: 5px;*/
+	height: 650px;
+	width: 100%;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.paralheader {
+	height: 100vh;
+	width: 100%;
 	background-attachment: fixed;
 	background-size: 100% auto;
 	background-position: center;
@@ -120,51 +216,41 @@ body, html {
 	overflow: hidden;
 	z-index: 2;
 }
+.paralheader .pagetitle {
+	color: rgba(255,255,255,1.00);
+	font-size: 120px;
+	font-weight: 800;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	margin-top: 45vh;
+	z-index: 20;
+	overflow: hidden;
+	text-align: center;
+}
 .paral2 .paragraph {
 	color: rgba(255,255,255,1.00);
 	font-size: 30px;
-	font-family: "source-sans-pro", "droid-sans", "sans-serif";
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
 	z-index: 20;
-	margin-left: 30vw;
-	margin-right: 5vw;
-	margin-top: 50px;
+	overflow: hidden;
+	flex: 0 0 50vw;
 }
 .paral2 .title {
 	color: rgba(255,255,255,1.00);
 	font-size: 60px;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	margin-left: 10vw;
-	margin-top: 200px;
-	margin-right: 70vw;
+	margin-right: 10vw;
 	z-index: 20;
-}
-.paral .overlay {
-	background-color: rgba(29,48,79,0.46);
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	z-index: 4;
-}
-.paral p {
-	color: rgba(255,255,255,1.00);
-	font-size: 40px;
-	font-family: "Lucida Console", Monaco, monospace;
-	text-align: center;
-	z-index: 20;
-}
-.paral h1 {
-	color: rgba(255,255,255,1.00);
-	font-size: 80px;
-	font-family: "Lucida Console", Monaco, monospace;
-	text-align: center;
-	padding-top: 45vh;
-	z-index: 20;
+	overflow: hidden;
+	flex: 0 0 15vw;
 }
 
 @media only screen and (max-aspect-ratio: 16/9 ) {
-	.paral {
+	.paral,.paral2 {
 		background-size: auto 100%;
-		height: 800px;
+	}
+	.paralheader {
+		background-size: auto 100%;
 	}
 }
