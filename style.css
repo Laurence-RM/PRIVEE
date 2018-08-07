@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 @import url("https://use.typekit.net/ugv6yjj.css");
-
 * {
 	margin: 0;
 	padding: 0;
@@ -25,7 +24,7 @@ footer {
 	width: 100%;
 	height: 160px;
 }
-footer p{
+footer p {
 	font-size: 1em;
 	font-family: "Raleway", "Lucida Console", "sans-serif";
 	color: gainsboro;
@@ -160,7 +159,7 @@ footer p{
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-.paral,.paral3 {
+.paral, .paral3 {
 	height: 100vh;
 	background-attachment: fixed;
 	background-size: 100% auto;
@@ -250,14 +249,14 @@ footer p{
 	flex: 0 0 15vw;
 }
 .site-wrap {
-    min-width: 100%;
-    min-height: 100%;
-    background-color: white;
-    position: relative;
-    top: 0;
-    bottom: 100%;
-    left: 0;
-    z-index: 10;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: white;
+	position: relative;
+	top: 0;
+	bottom: 100%;
+	left: 0;
+	z-index: 10;
 }
 .sidenav {
 	list-style: none;
@@ -290,136 +289,139 @@ footer p{
 	display: block;
 }
 .nav-trigger {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
 }
 label[for="nav-trigger"] {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	z-index: 11;
 	width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect fill='white' y='24' width='30' height='6'/><rect fill='white' y='12' width='30' height='6'/></svg>");
-    background-size: contain;
+	height: 30px;
+	cursor: pointer;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect fill='white' y='24' width='30' height='6'/><rect fill='white' y='12' width='30' height='6'/></svg>");
+	background-size: contain;
 }
 .nav-trigger:checked + label {
-    left: 215px;
+	left: 215px;
 }
 .nav-trigger:checked ~ .site-wrap {
-    left: 200px;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.30);
+	left: 200px;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.30);
 }
 .nav-trigger + label, .site-wrap {
-    transition: left 0.2s;
+	transition: left 0.2s;
 }
 #sidetitle {
 	letter-spacing: 5px;
 	font-size: 40px;
 	font-weight: bold;
 }
+
 @media only screen and (max-aspect-ratio: 16/9 ) {
-	.paral,.paral2 {
-		background-size: auto 100%;
-	}
-	.paralheader, .paralheader2 {
-		background-size: auto 100%;
-	}
+.paral, .paral2 {
+	background-size: auto 100%;
 }
-@media only screen and (max-width: 480px) {
-	.videocontainer, .pagemenu, .maintitle {
-		display: none;
-	}
-	.paral h1 {
-		font-size: 60px;
-		padding-top: 40vh;
-	}
-	.paral p {
-		font-size: 30px;
-	}
-	.paralheader .pagetitle, .paralheader2 .pagetitle{
-		font-size: 60px;
-	}
-	.sidenav {
-		display: unset;
-	}
-	.paralheader2 {
-		display: block;
-	}
-	.amenspace {
+.paralheader, .paralheader2 {
+	background-size: auto 100%;
+}
+}
+
+@media only screen and (max-device-width: 480px) {
+.videocontainer, .pagemenu, .maintitle {
+	display: none;
+}
+.paral h1 {
+	font-size: 60px;
+	padding-top: 40vh;
+}
+.paral p {
+	font-size: 30px;
+}
+.paralheader .pagetitle, .paralheader2 .pagetitle {
+	font-size: 60px;
+}
+.sidenav {
+	display: unset;
+}
+.paralheader2 {
+	display: block;
+}
+.amenspace {
 	height: 1050px;
 	flex-wrap: wrap;
-	}
-	.paral3 {
-		background-size: auto 100%;
-		height: 100vh;
-		background-attachment: scroll;
-		background-position: top;
-	}
-	.paral2 {
-		height: 100vh;
-		background-size: auto 100%;
-		flex-direction: column;
-	}
-	.paral2 .title {
+}
+.paral3 {
+	background-size: auto 100%;
+	height: 100vh;
+	background-attachment: scroll;
+	background-position: top;
+}
+.paral2 {
+	height: 100vh;
+	background-size: auto 100%;
+	flex-direction: column;
+}
+.paral2 .title {
 	padding-top: 15%;
 	padding-right: 0;
 	padding-left: 0;
 	padding-bottom: 10%;
-	}
-	.paral2 .paragraph {
+}
+.paral2 .paragraph {
 	padding: 0 20px;
 	font-size: 35px;
 	flex: 0 0 75%;
-	}
-	.video2{
-		display: none;
-	}
-	#pmain1 {
-		padding-top: 48px;
-		padding-left: 5px;
-		padding-right: 5px;
-		font-size: 18px;
-	}
-	#pmain2 {
-		padding-top: 54px;
-		font-size: 18px;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	#pamen1 {
-		padding-left: 5px;
-		padding-top: 39px;
-		padding-right: 5px;
-		padding-bottom: 0px;
-		font-size: 18px;
-	}
-	#pamen2 {
-		padding-top: 58px;
-		padding-left: 5px;
-		padding-right: 5px;
-		padding-bottom: 0px;
-		font-size: 18px;
-	}
-	.amenul {
-		margin-top: -50px;
-	}
-	#proom1 {
+}
+.video2 {
+	display: none;
+}
+#pmain1 {
+	padding-top: 48px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 18px;
+}
+#pmain2 {
+	padding-top: 54px;
+	font-size: 18px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#pamen1 {
+	padding-left: 5px;
+	padding-top: 39px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	font-size: 18px;
+}
+#pamen2 {
+	padding-top: 58px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	font-size: 18px;
+}
+.amenul {
+	margin-top: -50px;
+}
+#proom1 {
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-top: 45px;
 	font-size: 22px;
-	}
-	#wsroom1 {
-		height: 375px;
-	}
 }
-@media only screen and (min-width: 480px) {
-	.nav-trigger, .sidenav, label {
-		display: none;
-	}
-	#proom1 {
+#wsroom1 {
+	height: 375px;
+}
+}
+
+@media only screen and (min-device-width: 480px) {
+.nav-trigger, .sidenav, label {
+	display: none;
+}
+#proom1 {
 	padding-top: 52px;
-	}
+}
 }
