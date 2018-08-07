@@ -131,7 +131,7 @@ footer p {
 .amenspace {
 	background-color: rgba(15,52,96,1.00);
 	width: 100%;
-	height: 500px;
+	height: auto;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -144,6 +144,7 @@ footer p {
 	padding-left: 5vw;
 	padding-right: 5vw;
 	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .amenspace li {
 	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
@@ -273,8 +274,7 @@ footer p {
 }
 .sidenav li {
 	background-color: cadetblue;
-	height: 40px;
-	padding: 25px 20px;
+	height: 80px;
 	border-bottom-width: medium;
 	border-bottom-color: white;
 	border-bottom-style: groove;
@@ -286,6 +286,7 @@ footer p {
 	font-size: 25px;
 	letter-spacing: 2px;
 	font-variant-caps: all-petite-caps;
+	padding: 25px 0px 25px 25px;
 	display: block;
 }
 .nav-trigger {
@@ -317,6 +318,7 @@ label[for="nav-trigger"] {
 	letter-spacing: 5px;
 	font-size: 40px;
 	font-weight: bold;
+	padding: 17px 25px
 }
 
 @media only screen and (max-aspect-ratio: 16/9 ) {
@@ -328,7 +330,7 @@ label[for="nav-trigger"] {
 }
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
 .videocontainer, .pagemenu, .maintitle {
 	display: none;
 }
@@ -349,12 +351,12 @@ label[for="nav-trigger"] {
 	display: block;
 }
 .amenspace {
-	height: 1050px;
+	height: auto;
 	flex-wrap: wrap;
 }
 .paral3 {
 	background-size: auto 100%;
-	height: 100vh;
+	height: 400px;
 	background-attachment: scroll;
 	background-position: top;
 }
@@ -371,7 +373,7 @@ label[for="nav-trigger"] {
 }
 .paral2 .paragraph {
 	padding: 0 20px;
-	font-size: 35px;
+	font-size: 30px;
 	flex: 0 0 75%;
 }
 .video2 {
@@ -403,8 +405,13 @@ label[for="nav-trigger"] {
 	padding-bottom: 0px;
 	font-size: 18px;
 }
-.amenul {
-	margin-top: -50px;
+.amenspace ul {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	flex: 0 0 0;
+}
+.amenspace li {
+	font-size: 18px;
 }
 #proom1 {
 	padding-left: 5px;
@@ -416,8 +423,43 @@ label[for="nav-trigger"] {
 	height: 375px;
 }
 }
-
-@media only screen and (min-device-width: 480px) {
+/*iPhone 6,7,8*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+	.paral, .paral2 {
+		height: 500px;
+	}
+	.paral3 {
+		height: 450px;
+	}
+	.paralheader, .paralheader2 {
+		height: 667px;
+	}
+}
+/*iPhone 6,7,8 plus*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+	.paral, .paral2 {
+		height: 600px;
+	}
+	.paral3 {
+		height: 500px;
+	}
+	.paralheader, .paralheader2 {
+		height: 736px;
+	}
+}
+/*iPhone X*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3)and (orientation : portrait) { 
+	.paral, .paral2 {
+		height: 600px;
+	}
+	.paral3 {
+		height: 500px;
+	}
+	.paralheader, .paralheader2 {
+		height: 812px;
+	}
+}
+@media only screen and (min-width: 480px) {
 .nav-trigger, .sidenav, label {
 	display: none;
 }
