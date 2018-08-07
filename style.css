@@ -17,6 +17,9 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
+body {
+	overflow-x: hidden;
+}
 footer {
 	background-color: rgba(35,46,51,1.00);
 	width: 100%;
@@ -93,7 +96,6 @@ footer p{
 .pagemenu li {
 	float: right;
 	margin-top: 5vh;
-	
 }
 .pagemenu li a {
 	display: block;
@@ -115,7 +117,7 @@ footer p{
 	height: 200px;
 	width: 100%;
 	overflow: hidden;
-	z-index: 10;
+	z-index: 3;
 }
 .whitespace p {
 	color: rgba(94,94,94,1.00);
@@ -125,10 +127,10 @@ footer p{
 	padding-right: 30%;
 	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
 	text-align: center;
-	z-index: 15;
+	z-index: 4;
 }
 .amenspace {
-	background-color:rgba(15,52,96,1.00);
+	background-color: rgba(15,52,96,1.00);
 	width: 100%;
 	height: 500px;
 	overflow: hidden;
@@ -158,7 +160,6 @@ footer p{
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-
 .paral,.paral3 {
 	height: 100vh;
 	background-attachment: fixed;
@@ -166,21 +167,21 @@ footer p{
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	z-index: 2;
+	z-index: 1;
 }
 .paral .overlay {
 	background-color: rgba(29,48,79,0.46);
 	height: 100%;
 	width: 100%;
 	position: relative;
-	z-index: 4;
+	z-index: 3;
 }
 .paral p {
 	color: rgba(255,255,255,1.00);
 	font-size: 40px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
-	z-index: 20;
+	z-index: 2;
 }
 .paral h1 {
 	color: rgba(255,255,255,1.00);
@@ -188,7 +189,7 @@ footer p{
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
 	padding-top: 45vh;
-	z-index: 20;
+	z-index: 2;
 }
 .paral3 {
 	height: 75vh;
@@ -206,7 +207,7 @@ footer p{
 	flex-direction: row;
 	align-items: center;
 }
-.paralheader {
+.paralheader, .paralheader2 {
 	height: 100vh;
 	width: 100%;
 	background-attachment: fixed;
@@ -216,13 +217,16 @@ footer p{
 	overflow: hidden;
 	z-index: 2;
 }
-.paralheader .pagetitle {
+.paralheader2 {
+	display: none;
+}
+.paralheader .pagetitle, .paralheader2 .pagetitle {
 	color: rgba(255,255,255,1.00);
 	font-size: 120px;
 	font-weight: 800;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	margin-top: 45vh;
-	z-index: 20;
+	z-index: 3;
 	overflow: hidden;
 	text-align: center;
 }
@@ -231,7 +235,7 @@ footer p{
 	font-size: 30px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
-	z-index: 20;
+	z-index: 3;
 	overflow: hidden;
 	flex: 0 0 50vw;
 }
@@ -241,16 +245,181 @@ footer p{
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	margin-left: 10vw;
 	margin-right: 10vw;
-	z-index: 20;
+	z-index: 3;
 	overflow: hidden;
 	flex: 0 0 15vw;
 }
-
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 10;
+}
+.sidenav {
+	list-style: none;
+	background: rgba(15,52,96,1.00);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	display: none;
+}
+.sidenav li {
+	background-color: cadetblue;
+	height: 40px;
+	padding: 25px 20px;
+	border-bottom-width: medium;
+	border-bottom-color: white;
+	border-bottom-style: groove;
+}
+.sidenav li a {
+	text-decoration: none;
+	color: white;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	font-size: 25px;
+	letter-spacing: 2px;
+	font-variant-caps: all-petite-caps;
+	display: block;
+}
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+	width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect fill='white' y='24' width='30' height='6'/><rect fill='white' y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+}
+.nav-trigger:checked + label {
+    left: 215px;
+}
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.30);
+}
+.nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+}
+#sidetitle {
+	letter-spacing: 5px;
+	font-size: 40px;
+	font-weight: bold;
+}
 @media only screen and (max-aspect-ratio: 16/9 ) {
 	.paral,.paral2 {
 		background-size: auto 100%;
 	}
-	.paralheader {
+	.paralheader, .paralheader2 {
 		background-size: auto 100%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.videocontainer, .pagemenu, .maintitle {
+		display: none;
+	}
+	.paral h1 {
+		font-size: 60px;
+		padding-top: 40vh;
+	}
+	.paral p {
+		font-size: 30px;
+	}
+	.paralheader .pagetitle, .paralheader2 .pagetitle{
+		font-size: 60px;
+	}
+	.sidenav {
+		display: unset;
+	}
+	.paralheader2 {
+		display: block;
+	}
+	.amenspace {
+	height: 1050px;
+	flex-wrap: wrap;
+	}
+	.paral3 {
+		background-size: auto 100%;
+		height: 100vh;
+		background-attachment: scroll;
+		background-position: top;
+	}
+	.paral2 {
+		height: 100vh;
+		background-size: auto 100%;
+		flex-direction: column;
+	}
+	.paral2 .title {
+	padding-top: 15%;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 10%;
+	}
+	.paral2 .paragraph {
+	padding: 0 20px;
+	font-size: 35px;
+	flex: 0 0 75%;
+	}
+	.video2{
+		display: none;
+	}
+	#pmain1 {
+		padding-top: 48px;
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 18px;
+	}
+	#pmain2 {
+		padding-top: 54px;
+		font-size: 18px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	#pamen1 {
+		padding-left: 5px;
+		padding-top: 39px;
+		padding-right: 5px;
+		padding-bottom: 0px;
+		font-size: 18px;
+	}
+	#pamen2 {
+		padding-top: 58px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 0px;
+		font-size: 18px;
+	}
+	.amenul {
+		margin-top: -50px;
+	}
+	#proom1 {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 45px;
+	font-size: 22px;
+	}
+	#wsroom1 {
+		height: 375px;
+	}
+}
+@media only screen and (min-width: 480px) {
+	.nav-trigger, .sidenav, label {
+		display: none;
+	}
+	#proom1 {
+	padding-top: 52px;
 	}
 }
