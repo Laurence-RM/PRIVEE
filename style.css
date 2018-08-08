@@ -113,7 +113,7 @@ footer p {
 }
 .whitespace {
 	background-color: white;
-	height: 200px;
+	height: auto;
 	width: 100%;
 	overflow: hidden;
 	z-index: 3;
@@ -121,9 +121,7 @@ footer p {
 .whitespace p {
 	color: rgba(94,94,94,1.00);
 	font-size: 18px;
-	padding-top: 72px;
-	padding-left: 30%;
-	padding-right: 30%;
+	padding: 5vh 5vw;
 	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
 	text-align: center;
 	z-index: 4;
@@ -162,8 +160,8 @@ footer p {
 }
 .paral, .paral3 {
 	height: 100vh;
-	background-attachment: fixed;
-	background-size: 100% auto;
+	background-attachment: scroll;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -197,7 +195,7 @@ footer p {
 .paral2 {
 	height: 650px;
 	width: 100%;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-size: 100% auto;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -210,8 +208,8 @@ footer p {
 .paralheader, .paralheader2 {
 	height: 100vh;
 	width: 100%;
-	background-attachment: fixed;
-	background-size: 100% auto;
+	background-attachment: scroll;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -243,11 +241,11 @@ footer p {
 	color: rgba(255,255,255,1.00);
 	font-size: 60px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	margin-left: 10vw;
+	margin-left: 5vw;
 	margin-right: 10vw;
 	z-index: 3;
 	overflow: hidden;
-	flex: 0 0 15vw;
+	flex: 0 0 20vw;
 }
 .site-wrap {
 	min-width: 100%;
@@ -321,7 +319,7 @@ label[for="nav-trigger"] {
 	padding: 17px 25px
 }
 
-@media only screen and (max-aspect-ratio: 16/9 ) {
+@media only screen and (orientation: portrait) {
 .paral, .paral2 {
 	background-size: auto 100%;
 }
@@ -357,7 +355,64 @@ label[for="nav-trigger"] {
 .paral3 {
 	background-size: auto 100%;
 	height: 400px;
-	background-attachment: scroll;
+	background-position: top;
+}
+.paral2 {
+	background-size: auto 100%;
+	flex-direction: column;
+}
+.paral2 .title {
+	padding-top: 15%;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 10%;
+	font-size: 50px;
+}
+.paral2 .paragraph {
+	padding: 0 20px;
+	font-size: 30px;
+	flex: 0 0 75%;
+}
+.video2 {
+	display: none;
+}
+.amenspace ul {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	flex: 0 0 0;
+}
+.amenspace li {
+	font-size: 18px;
+}
+}
+
+@media only screen and (max-width : 480px) and (-webkit-device-pixel-ratio : 3) {
+.videocontainer, .pagemenu, .maintitle {
+	display: none;
+}
+.paral h1 {
+	font-size: 60px;
+	padding-top: 40vh;
+}
+.paral p {
+	font-size: 30px;
+}
+.paralheader .pagetitle, .paralheader2 .pagetitle {
+	font-size: 60px;
+}
+.sidenav {
+	display: unset;
+}
+.paralheader2 {
+	display: block;
+}
+.amenspace {
+	height: auto;
+	flex-wrap: wrap;
+}
+.paral3 {
+	background-size: auto 100%;
+	height: 400px;
 	background-position: top;
 }
 .paral2 {
@@ -370,6 +425,7 @@ label[for="nav-trigger"] {
 	padding-right: 0;
 	padding-left: 0;
 	padding-bottom: 10%;
+	font-size: 50px;
 }
 .paral2 .paragraph {
 	padding: 0 20px;
@@ -379,32 +435,6 @@ label[for="nav-trigger"] {
 .video2 {
 	display: none;
 }
-#pmain1 {
-	padding-top: 48px;
-	padding-left: 5px;
-	padding-right: 5px;
-	font-size: 18px;
-}
-#pmain2 {
-	padding-top: 54px;
-	font-size: 18px;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-#pamen1 {
-	padding-left: 5px;
-	padding-top: 39px;
-	padding-right: 5px;
-	padding-bottom: 0px;
-	font-size: 18px;
-}
-#pamen2 {
-	padding-top: 58px;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-bottom: 0px;
-	font-size: 18px;
-}
 .amenspace ul {
 	padding-top: 15px;
 	padding-bottom: 10px;
@@ -413,57 +443,75 @@ label[for="nav-trigger"] {
 .amenspace li {
 	font-size: 18px;
 }
-#proom1 {
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 45px;
-	font-size: 22px;
 }
-#wsroom1 {
-	height: 375px;
+@media only screen and (max-width : 480px) and (-webkit-device-pixel-ratio : 2) {
+.videocontainer, .pagemenu, .maintitle {
+	display: none;
 }
+.paral h1 {
+	font-size: 60px;
+	padding-top: 40vh;
 }
-/*iPhone 6,7,8*/
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
-	.paral, .paral2 {
-		height: 500px;
-	}
-	.paral3 {
-		height: 450px;
-	}
-	.paralheader, .paralheader2 {
-		height: 667px;
-	}
+.paral p {
+	font-size: 30px;
 }
-/*iPhone 6,7,8 plus*/
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
-	.paral, .paral2 {
-		height: 600px;
-	}
-	.paral3 {
-		height: 500px;
-	}
-	.paralheader, .paralheader2 {
-		height: 736px;
-	}
+.paralheader .pagetitle, .paralheader2 .pagetitle {
+	font-size: 60px;
 }
-/*iPhone X*/
-@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3)and (orientation : portrait) { 
-	.paral, .paral2 {
-		height: 600px;
-	}
-	.paral3 {
-		height: 500px;
-	}
-	.paralheader, .paralheader2 {
-		height: 812px;
-	}
+.sidenav {
+	display: unset;
+}
+.paralheader2 {
+	display: block;
+}
+.amenspace {
+	height: auto;
+	flex-wrap: wrap;
+}
+.paral3 {
+	background-size: auto 100%;
+	height: 400px;
+	background-position: top;
+}
+.paral2 {
+	height: 100vh;
+	background-size: auto 100%;
+	flex-direction: column;
+}
+.paral2 .title {
+	padding-top: 15%;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 10%;
+	font-size: 50px;
+}
+.paral2 .paragraph {
+	padding: 0 20px;
+	font-size: 30px;
+	flex: 0 0 75%;
+}
+.video2 {
+	display: none;
+}
+
+.amenspace ul {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	flex: 0 0 0;
+}
+.amenspace li {
+	font-size: 18px;
+}
 }
 @media only screen and (min-width: 480px) {
 .nav-trigger, .sidenav, label {
 	display: none;
 }
-#proom1 {
-	padding-top: 52px;
+.paral, .paral2, .paralheader2, .paralheader {
+	background-attachment: fixed;
+	height: 100vh;
+}
+.whitespace p {
+	padding: 7vh 25%;
 }
 }
