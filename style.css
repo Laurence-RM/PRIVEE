@@ -177,10 +177,9 @@ footer p {
 }
 .paral .overlay, .paral2 .overlay {
 	background-color: rgba(29,48,79,0.46);
-	height: 100%;
-	width: 100%;
-	position: relative;
 	z-index: 3;
+	height: 250px;
+	width: 100%;
 }
 .paral p {
 	color: rgba(255,255,255,1.00);
@@ -194,7 +193,10 @@ footer p {
 	font-size: 35px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
-	margin: 25% 0 0 0;
+	padding-top: 90px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 0;
 	z-index: 2;
 }
 .paral3 {
@@ -238,6 +240,7 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 75vh;
 }
 .paral2 .overlay .title {
 	color: rgba(255,255,255,1.00);
@@ -354,7 +357,7 @@ label[for="nav-trigger"] {
 
 /*Everything but phones*/
 @media only screen and (min-width : 480px) {
-.paral2 {
+.paral2, .paral2 .overlay {
 	height: 100vh;
 }
 }
@@ -374,11 +377,18 @@ label[for="nav-trigger"] {
 	margin: 160px 0 0 0;
 	font-size: 65px;
 }
+.paral .overlay {
+	height:415px;
+}
 .paral p {
 	font-size: 40px;
 }
 .paral h1 {
 	font-size: 60px;
+	padding-top: 166px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 0;
 }
 .paral2 .overlay .title {
 	font-size: 46px;
@@ -405,11 +415,14 @@ label[for="nav-trigger"] {
 	height: 100vh;
 	background-size: cover;
 }
+.paral .overlay {
+	height: 100vh;
+}
 .paral p {
 	font-size: 40px;
 }
 .paral h1 {
-	margin: 40vh 0 0 0;
+	padding: 40vh 0 0 0;
 	font-size: 80px;
 }
 .paral2 .overlay {
