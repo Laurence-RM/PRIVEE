@@ -159,7 +159,7 @@ footer p {
 	margin-bottom: 20px;
 }
 .paral, .paral3 {
-	height: 100vh;
+	height: 250px;
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center;
@@ -176,21 +176,23 @@ footer p {
 }
 .paral p {
 	color: rgba(255,255,255,1.00);
-	font-size: 40px;
+	font-size: 20px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
 	z-index: 2;
 }
 .paral h1 {
 	color: rgba(255,255,255,1.00);
-	font-size: 80px;
+	font-size: 35px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
-	padding-top: 45vh;
+	padding-top: 20%;
 	z-index: 2;
 }
 .paral3 {
-	height: 75vh;
+	background-size: 100% auto;
+	height: 200px;
+	background-position: top;
 }
 .paral2 {
 	height: 650px;
@@ -206,7 +208,7 @@ footer p {
 	align-items: center;
 }
 .paralheader, .paralheader2 {
-	height: 100vh;
+	height: 275px;
 	width: 100%;
 	background-attachment: scroll;
 	background-size: cover;
@@ -220,13 +222,14 @@ footer p {
 }
 .paralheader .pagetitle, .paralheader2 .pagetitle {
 	color: rgba(255,255,255,1.00);
-	font-size: 120px;
+	font-size: 50px;
 	font-weight: 800;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	margin-top: 45vh;
+	margin-top: 1%;
 	z-index: 3;
 	overflow: hidden;
 	text-align: center;
+	margin-left: 42px;
 }
 .paral2 .paragraph {
 	color: rgba(255,255,255,1.00);
@@ -333,14 +336,14 @@ label[for="nav-trigger"] {
 	display: none;
 }
 .paral h1 {
-	font-size: 60px;
-	padding-top: 40vh;
+	font-size: 45px;
+	padding-top: 10%;
 }
 .paral p {
 	font-size: 30px;
 }
 .paralheader .pagetitle, .paralheader2 .pagetitle {
-	font-size: 60px;
+
 }
 .sidenav {
 	display: unset;
@@ -351,11 +354,6 @@ label[for="nav-trigger"] {
 .amenspace {
 	height: auto;
 	flex-wrap: wrap;
-}
-.paral3 {
-	background-size: auto 100%;
-	height: 400px;
-	background-position: top;
 }
 .paral2 {
 	background-size: auto 100%;
@@ -396,9 +394,6 @@ label[for="nav-trigger"] {
 }
 .paral p {
 	font-size: 30px;
-}
-.paralheader .pagetitle, .paralheader2 .pagetitle {
-	font-size: 60px;
 }
 .sidenav {
 	display: unset;
@@ -507,11 +502,33 @@ label[for="nav-trigger"] {
 .nav-trigger, .sidenav, label {
 	display: none;
 }
-.paral, .paral2, .paralheader2, .paralheader {
+.paral, .paral2, .paral3, .paralheader2, .paralheader {
 	background-attachment: fixed;
 	height: 100vh;
 }
+.paralheader .pagetitle, .paralheader2 .pagetitle {
+	font-size: 120px;
+	margin-top: 22%;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+}
 .whitespace p {
 	padding: 7vh 25%;
+}
+.paral p {
+	color: rgba(255,255,255,1.00);
+	font-size: 40px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	text-align: center;
+	z-index: 2;
+}
+.paral h1 {
+	color: rgba(255,255,255,1.00);
+	font-size: 80px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	text-align: center;
+	padding-top: 45vh;
+	z-index: 2;
 }
 }
