@@ -22,20 +22,24 @@ body {
 footer {
 	background-color: rgba(35,46,51,1.00);
 	width: 100%;
-	height: 160px;
+	height: auto;
 }
 footer p {
 	font-size: 1em;
 	font-family: "Raleway", "Lucida Console", "sans-serif";
 	color: gainsboro;
 	text-align: center;
-	padding-top: 72px;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 .videocontainer {
 	height: 100vh;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	display: none;
 }
 .video2 {
 	height: 800px;
@@ -44,6 +48,7 @@ footer p {
 	overflow: hidden;
 	background-color: rgba(15,52,96,1.00);
 	text-align: center;
+	display: none;
 }
 .video2 iframe {
 	padding-top: 75px;
@@ -85,6 +90,7 @@ footer p {
 	letter-spacing: 6px;
 	z-index: 6;
 	text-decoration: none;
+	display: none;
 }
 .pagemenu {
 	z-index: 6;
@@ -121,7 +127,7 @@ footer p {
 .whitespace p {
 	color: rgba(94,94,94,1.00);
 	font-size: 18px;
-	padding: 5vh 5vw;
+	padding: 5vh 7vw;
 	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
 	text-align: center;
 	z-index: 4;
@@ -134,15 +140,16 @@ footer p {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 .amenspace ul {
 	list-style-type: circle;
 	list-style-position: outside;
-	flex: 0 0 15vw;
-	padding-left: 5vw;
-	padding-right: 5vw;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	flex: 0 0 auto;
+	margin-top: 30px;
+	margin-right: 5vw;
+	margin-left: 5vw;
+	margin-bottom: 15px;
 }
 .amenspace li {
 	font-family: "Raleway", "source-sans-pro", "droid-sans", "sans-serif";
@@ -157,6 +164,7 @@ footer p {
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 20px;
+	text-align: center;
 }
 .paral, .paral3 {
 	height: 250px;
@@ -167,7 +175,7 @@ footer p {
 	overflow: hidden;
 	z-index: 1;
 }
-.paral .overlay {
+.paral .overlay, .paral2 .overlay {
 	background-color: rgba(29,48,79,0.46);
 	height: 100%;
 	width: 100%;
@@ -186,26 +194,22 @@ footer p {
 	font-size: 35px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
-	padding-top: 20%;
+	margin: 25% 0 0 0;
 	z-index: 2;
 }
 .paral3 {
-	background-size: 100% auto;
+	background-size: cover;
 	height: 200px;
 	background-position: top;
 }
 .paral2 {
-	height: 650px;
+	height: 75vh;
 	width: 100%;
 	background-attachment: scroll;
-	background-size: 100% auto;
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	z-index: 2;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 }
 .paralheader, .paralheader2 {
 	height: 275px;
@@ -222,33 +226,41 @@ footer p {
 }
 .paralheader .pagetitle, .paralheader2 .pagetitle {
 	color: rgba(255,255,255,1.00);
-	font-size: 50px;
+	font-size: 45px;
 	font-weight: 800;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	margin-top: 1%;
+	margin-top: 115px;
 	z-index: 3;
 	overflow: hidden;
 	text-align: center;
-	margin-left: 42px;
 }
-.paral2 .paragraph {
+.paral2 .overlay {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.paral2 .overlay .title {
 	color: rgba(255,255,255,1.00);
-	font-size: 30px;
+	font-size: 44px;
+	font-family: "Raleway", "Lucida Console", Monaco, monospace;
+	font-weight: bold;
+	z-index: 3;
+	overflow: hidden;
+	flex: 0 0 auto;
+	margin-top: 5vh;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 5vh;
+}
+.paral2 .overlay .paragraph {
+	color: rgba(255,255,255,1.00);
+	font-size: 28px;
 	font-family: "Raleway", "Lucida Console", Monaco, monospace;
 	text-align: center;
 	z-index: 3;
 	overflow: hidden;
-	flex: 0 0 50vw;
-}
-.paral2 .title {
-	color: rgba(255,255,255,1.00);
-	font-size: 60px;
-	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	margin-left: 5vw;
-	margin-right: 10vw;
-	z-index: 3;
-	overflow: hidden;
-	flex: 0 0 20vw;
+	margin: 0 5vw;
+	flex: 0 0 auto;
 }
 .site-wrap {
 	min-width: 100%;
@@ -271,7 +283,6 @@ footer p {
 	bottom: 0;
 	left: 0;
 	z-index: 0;
-	display: none;
 }
 .sidenav li {
 	background-color: cadetblue;
@@ -322,213 +333,111 @@ label[for="nav-trigger"] {
 	padding: 17px 25px
 }
 
-@media only screen and (orientation: portrait) {
-.paral, .paral2 {
-	background-size: auto 100%;
-}
-.paralheader, .paralheader2 {
-	background-size: auto 100%;
-}
-}
-
-@media only screen and (max-width: 480px) {
-.videocontainer, .pagemenu, .maintitle {
-	display: none;
-}
-.paral h1 {
-	font-size: 45px;
-	padding-top: 10%;
-}
-.paral p {
-	font-size: 30px;
-}
-.paralheader .pagetitle, .paralheader2 .pagetitle {
-
-}
+/*Phone Only- put in global if possible*/
+@media only screen and (max-width : 480px ) and ( orientation : portrait ) {
 .sidenav {
 	display: unset;
 }
 .paralheader2 {
 	display: block;
 }
-.amenspace {
-	height: auto;
-	flex-wrap: wrap;
-}
-.paral2 {
-	background-size: auto 100%;
-	flex-direction: column;
-}
-.paral2 .title {
-	padding-top: 15%;
-	padding-right: 0;
-	padding-left: 0;
-	padding-bottom: 10%;
-	font-size: 50px;
-}
-.paral2 .paragraph {
-	padding: 0 20px;
-	font-size: 30px;
-	flex: 0 0 75%;
-}
-.video2 {
+.video2, .pagemenu {
 	display: none;
 }
-.amenspace ul {
-	padding-top: 15px;
-	padding-bottom: 10px;
-	flex: 0 0 0;
 }
-.amenspace li {
-	font-size: 18px;
-}
+
+@media only screen and (max-width : 480px) and (-webkit-device-pixel-ratio : 2) {
 }
 
 @media only screen and (max-width : 480px) and (-webkit-device-pixel-ratio : 3) {
-.videocontainer, .pagemenu, .maintitle {
-	display: none;
-}
-.paral h1 {
-	font-size: 60px;
-	padding-top: 40vh;
-}
-.paral p {
-	font-size: 30px;
-}
-.sidenav {
-	display: unset;
-}
-.paralheader2 {
-	display: block;
-}
-.amenspace {
-	height: auto;
-	flex-wrap: wrap;
-}
-.paral3 {
-	background-size: auto 100%;
-	height: 400px;
-	background-position: top;
-}
-.paral2 {
-	height: 100vh;
-	background-size: auto 100%;
-	flex-direction: column;
-}
-.paral2 .title {
-	padding-top: 15%;
-	padding-right: 0;
-	padding-left: 0;
-	padding-bottom: 10%;
-	font-size: 50px;
-}
-.paral2 .paragraph {
-	padding: 0 20px;
-	font-size: 30px;
-	flex: 0 0 75%;
-}
-.video2 {
-	display: none;
-}
-.amenspace ul {
-	padding-top: 15px;
-	padding-bottom: 10px;
-	flex: 0 0 0;
-}
-.amenspace li {
-	font-size: 18px;
-}
-}
-@media only screen and (max-width : 480px) and (-webkit-device-pixel-ratio : 2) {
-.videocontainer, .pagemenu, .maintitle {
-	display: none;
-}
-.paral h1 {
-	font-size: 60px;
-	padding-top: 40vh;
-}
-.paral p {
-	font-size: 30px;
-}
-.paralheader .pagetitle, .paralheader2 .pagetitle {
-	font-size: 60px;
-}
-.sidenav {
-	display: unset;
-}
-.paralheader2 {
-	display: block;
-}
-.amenspace {
-	height: auto;
-	flex-wrap: wrap;
-}
-.paral3 {
-	background-size: auto 100%;
-	height: 400px;
-	background-position: top;
-}
-.paral2 {
-	height: 100vh;
-	background-size: auto 100%;
-	flex-direction: column;
-}
-.paral2 .title {
-	padding-top: 15%;
-	padding-right: 0;
-	padding-left: 0;
-	padding-bottom: 10%;
-	font-size: 50px;
-}
-.paral2 .paragraph {
-	padding: 0 20px;
-	font-size: 30px;
-	flex: 0 0 75%;
-}
-.video2 {
-	display: none;
 }
 
-.amenspace ul {
-	padding-top: 15px;
-	padding-bottom: 10px;
-	flex: 0 0 0;
-}
-.amenspace li {
-	font-size: 18px;
+/*Everything but phones*/
+@media only screen and (min-width : 480px) {
+.paral2 {
+	height: 100vh;
 }
 }
-@media only screen and (min-width: 480px) {
-.nav-trigger, .sidenav, label {
+
+/*Landscape Phones and iPad*/
+@media only screen and (min-width : 480px) and (max-width: 890px) {
+.pagemenu {
 	display: none;
+}
+.paralheader2 {
+	display: block;
+}
+.paral, .paral3, .paralheader, .paralheader2 {
+	height: 415px;
+}
+.paralheader .pagetitle {
+	margin: 160px 0 0 0;
+	font-size: 65px;
+}
+.paral p {
+	font-size: 40px;
+}
+.paral h1 {
+	font-size: 60px;
+}
+.paral2 .overlay .title {
+	font-size: 46px;
+	margin-top: 12vh;
+}
+.paral2 .overlay .paragraph {
+	font-size: 32px;
+}
+.amenspace ul {
+	flex: 0 0 35vw;
+}
+.whitespace p {
+	padding: 7vh 12vw;
+}
+}
+
+/*PC Only*/
+@media only screen and (min-width : 890px) {
+.videocontainer, .maintitle, .video2 {
+	display: block;
 }
 .paral, .paral2, .paral3, .paralheader2, .paralheader {
 	background-attachment: fixed;
 	height: 100vh;
+	background-size: cover;
+}
+.paral p {
+	font-size: 40px;
+}
+.paral h1 {
+	margin: 40vh 0 0 0;
+	font-size: 80px;
+}
+.paral2 .overlay {
+	flex-direction: row;
+}
+.paral2 .overlay .title {
+	margin-left: 5vw;
+	font-size: 56px;
+}
+.paral2 .overlay .paragraph {
+	margin-left: 15vw;
+	flex: 0 0 50vw;
+	font-size: 36px;
+}
+.nav-trigger, .sidenav, label {
+	display: none;
+}
+.amenspace {
+	flex-wrap: nowrap;
+}
+.amenspace ul {
+	flex: 0 0 15vw;
 }
 .paralheader .pagetitle, .paralheader2 .pagetitle {
 	font-size: 120px;
-	margin-top: 22%;
-	margin-right: 0;
-	margin-left: 0;
-	margin-bottom: 0;
+	margin: 45vh 0 0 0;
 }
 .whitespace p {
-	padding: 7vh 25%;
-}
-.paral p {
-	color: rgba(255,255,255,1.00);
-	font-size: 40px;
-	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	text-align: center;
-	z-index: 2;
-}
-.paral h1 {
-	color: rgba(255,255,255,1.00);
-	font-size: 80px;
-	font-family: "Raleway", "Lucida Console", Monaco, monospace;
-	text-align: center;
-	padding-top: 45vh;
-	z-index: 2;
+	padding: 7vh 25vw;
 }
 }
