@@ -5,7 +5,7 @@ Contracted by Denison Yacht Sales
 
 Written and designed by Laurence Mullen
 
-Built from scrath using HTML, CSS, and JavaScript
+Built from scratch using HTML, CSS, and JavaScript
 
 
 ## Preview
